@@ -1,18 +1,20 @@
 function Botao() {
-   let texto = 'Hello, world!'
 
    const bode = document.getElementById('bode')
    function grayButton() {
       bode.style = 'background: #4444'
    }
    function whiteButton() {
-      bode.style = 'background: #f2f2f2'
+      bode.style = 'background: #ffff'
    }
 
    return (
       <div>
-         <button onClick={() => grayButton()}>{texto}</button>
-         <button onClick={() => whiteButton()}>{texto}</button>
+         <button onClick={grayButton}>Grey</button>
+         <br/>
+         <br/>
+         <br/>
+         <button onClick={whiteButton}>White</button>
       </div>
    )
 }
