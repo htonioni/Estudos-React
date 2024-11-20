@@ -1,0 +1,11 @@
+body {
+   padding: 0;
+   margin: 0;
+   font-family: 'Lucida Sans';
+}
+
+.headerSection {
+   display: flex;
+   justify-content: space-around;
+}
+
