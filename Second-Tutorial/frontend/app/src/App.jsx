@@ -1,17 +1,14 @@
-import './App.css'
+import './App.css';
+import Login from './components/Login';
+
 
 function App() {
 
   return (
-    <div className='login-form-wrap'>
-      <h2>Login</h2>
-      <form className='login-form'>
-        <input type="email" name="email" placeholder='Email' required/>
-        <input type="password" name="password" placeholder='Password' required/>
-        <button type="submit" className='btn-login'>Login</button>
-      </form>
+    <div>
+      <Login />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
