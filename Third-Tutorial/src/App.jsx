@@ -28,7 +28,7 @@ function App() {
       <div className="w-[500px]">
         <h1 className="text-3xl text-slate-100 font-bold text-center">Gerenciador de tarefas</h1>
         <AddTasks />
-        <Tasks tasks={tasks} banana="this is bananas"/>
+        <Tasks tasks={tasks} />
       </div>
     </div>
   );
