@@ -5,8 +5,8 @@
 }
 
 :root {
-    --cor-primaria: #F55B64;
-    --cor-secundaria: #C2373F;
+    --cor-primaria: #170ea0;
+    --cor-secundaria: #100690;
     --neutro: #F9F9F9;
     --preto: #131730;
     --fonte-titulo: "Krona One", sans-serif;
@@ -77,7 +77,7 @@ p{
 
 #adicionar-item{
     text-align: center;
-    padding: 12px 16px;
+    padding: 10px 16px;
     border-radius: 24px;
     background-color: var(--cor-primaria);
     color: var(--neutro);
