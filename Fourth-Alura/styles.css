@@ -144,3 +144,8 @@ ul {
     border-left: 2px solid var(--neutro);
     transform: rotate(-140deg);
 }
+
+.item-lista-button{
+    background-color: transparent;
+    border: none;
+}
