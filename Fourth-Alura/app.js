@@ -1,7 +1,8 @@
 
 const itemConteudo = document.getElementById("input-item");
 const botaoSalvarItem = document.getElementById("adicionar-item");
-const listaDeCompras = document.getElementById("lista-de-compras");
+const listaCompletado = document.getElementById("lista-de-compras");
+const listaComprados = document.getElementById("lista-comprados");
 let contador = 0;
 
 botaoSalvarItem.addEventListener("click", adicionarItem);
@@ -29,12 +30,17 @@ function adicionarItem(event) {
    checkboxLabel.setAttribute("for", checkboxInput.id);
 
    checkboxLabel.addEventListener("click",  (event) => {
-      const checkboxInput = event.currentTarget.querySelector(".checkbox-input")      
+      const checkboxInput = event.currentTarget.querySelector(".checkbox-input");      
       const checkboxCustomizado = event.currentTarget.querySelector(".checkbox-customizado")
+      const itemTitulo = event.currentTarget.closest("li").querySelector("#item-titulo");
       if (checkboxInput.checked) {
          checkboxCustomizado.classList.add("checked");
+         itemTitulo.style.textDecoration = "line-through";
+         listaComprados.appendChild(itemDaLista);
       } else {
          checkboxCustomizado.classList.remove("checked");
+         itemTitulo.style.textDecoration = "none";
+         listaCompletado.appendChild(itemDaLista);
       }
    })
    
@@ -48,6 +54,7 @@ function adicionarItem(event) {
    containerNomeDoItem.appendChild(containerCheckbox);
 
    const nomeDoItem = document.createElement("p");
+   nomeDoItem.id = "item-titulo"
    nomeDoItem.innerText = itemConteudo.value;
    containerNomeDoItem.appendChild(nomeDoItem);
    containerNomeDoItem.classList.add("container-nome-compra");
@@ -74,8 +81,16 @@ function adicionarItem(event) {
 
    containerItemLista.appendChild(containerNomeDoItem);
    containerItemLista.appendChild(containerBotoes);
-   itemDaLista.appendChild(containerItemLista);
 
-   listaDeCompras.appendChild(itemDaLista)
+   const itemData = document.createElement("p");
+   itemData.innerHTML = `${new Date().toLocaleDateString("pt-BR", { weekday: "long" })}
+    (${new Date().toLocaleDateString()}) as ${new Date().toLocaleTimeString("pt-BR", { hour: "numeric", minute: "numeric"})}`;
+   itemData.classList.add("item-lista-texto");
+
+   
+   
+   itemDaLista.appendChild(containerItemLista);
+   itemDaLista.appendChild(itemData);
+   listaCompletado.appendChild(itemDaLista)
 }
 
