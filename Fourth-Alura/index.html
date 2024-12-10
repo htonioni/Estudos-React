@@ -24,31 +24,9 @@
         <ul id="lista-de-compras">
             <h2>Lista de Projetos</h2>
             <hr />
-            <li>
-                <div class="item-lista-container">
-                    <div class="container-nome-compra">
-                        <div class="checkbox-container">
-                            <label for="checkbox-1">
-                                <input type="checkbox" class="checkbox-input" id="checkbox-1">
-                                <div class="checkbox-customizado checked"></div>
-                            </label>
-                        </div>
-                        
-                        <p>Demanda novo bin</p>
-                    </div>
-                    <div>
-                        <button class="item-lista-button">
-                            <img src="img/delete.svg" alt="delete">
-                        </button>
-                        <button class="item-lista-button">
-                            <img src="img/edit.svg" alt="edit">
-                        </button>
-                    </div>
-                </div>
-                <p class="item-lista-texto">Segunda-feira (31/01/2022) as 08:30</p>
-            </li>
+            <p id="mensagem-lista-vazia" style="display:block">Sua lista está vazia. Adicione itens para não esquecer nada na próxima compra!</p>
         </ul>
-        <ul id="lista-comprados">
+        <ul id="lista-comprados" style="display:none">
             <h2>Completado</h2>
             <hr />
 
