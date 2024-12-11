@@ -9,8 +9,15 @@ const listaCompletados = document.getElementById("lista-comprados");
 export function adicionarItem(event) {
    event.preventDefault();
 
-   const itemDaLista = criarItemDaLista(itemConteudo.value)
-   listaProjetos.appendChild(itemDaLista)
-   verificarListaVazia(listaProjetos)
-   verificarListaCompletados(listaCompletados)
+   if (itemConteudo.value.trim() === "") {
+      alert("Você não pode adicionar um item vazio");
+      return;
+   }
+
+   const itemDaLista = criarItemDaLista(itemConteudo.value);
+   listaProjetos.appendChild(itemDaLista);
+   verificarListaVazia(listaProjetos);
+   verificarListaCompletados(listaCompletados);
+   itemConteudo.value = "";
+
 }
