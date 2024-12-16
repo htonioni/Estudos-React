@@ -17,7 +17,7 @@ function TaskPage() {
           <button className="absolute left-0 top-0 bottom-0 text-slate-100">
             <ChevronLeftIcon onClick={onBackClick}/>
           </button>
-          <Title title={"test task page"}/>
+          <Title>Detalhes da tarefa</Title>
         </div>
         <div className="bg-slate-200 p-4 rounded-md">
           <h2 className="text-xl font-bold text-slate-600">{title}</h2>
