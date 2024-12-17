@@ -2,7 +2,7 @@
    --background-color:#00090E;
    --text-color:#E1E1E1;
    --primary-color:#81FE88;
-   --segundary-color:#888888;
+   --secondary-color:#888888;
    --tag-color:#171D1F;
    --itens-background:#171D1F;
    --font-family: "Prompt", sans-serif;
@@ -51,4 +51,9 @@ aside {
    gap:  10px;
    align-items: center;
    text-align: none;
+   color: var(--secondary-colors);
+}
+
+.lista-links li:first-of-type a {
+   color: var(--primary-color)
 }
