@@ -61,7 +61,7 @@ inputTags.addEventListener("keypress", async (evento) => {
     if (evento.key === 'Enter') {
         evento.preventDefault()
         const tagTexto = inputTags.value.trim();
-        if (tagTexto !== ""){
+        if (tagTexto !== "") {
             try {
                 const tagExiste = await verificaTagsDisponiveis(tagTexto);
                 if (tagExiste) {
@@ -76,6 +76,49 @@ inputTags.addEventListener("keypress", async (evento) => {
                 console.error("Erro ao verificar a existencia da tag");
                 alert("Erro ao verificar, checar o console")
             }
-            }
+        }
     }
+})
+
+async function publicarProjeto(nomeDoProjeto, descricaoDoProjeto, tagsProjeto) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const deuCerto = Math.random() > 0.5;
+            if (deuCerto) {
+                resolve("Projeto publicado com sucesso")
+            } else {
+                reject("Erro ao publicar o projeto")
+            }
+        }, 1000)
+    })
+}
+
+const botaoPublicar = document.querySelector(".botao-publicar");
+botaoPublicar.addEventListener("click", async (evento) => {
+    evento.preventDefault(); 
+    const nomeDoProjeto = document.getElementById("nome").value;
+    const descricaoDoProjeto = document.getElementById("descricao").value;
+    const tagsProjeto = Array.from(listaTags.querySelectorAll("p")).map((tag) => tag.textContent);
+
+    try {
+        const resultado = await publicarProjeto(nomeDoProjeto, descricaoDoProjeto, tagsProjeto);
+        console.log(resultado);
+        alert("Deu tudo certo!")
+    } catch (error) {
+        console.log("Deu errado", error);
+        alert("Deu errado")
+    }
+})
+
+const botaoDescartar = document.querySelector(".botao-descartar");
+botaoDescartar.addEventListener("click", (evento) => {
+    evento.preventDefault();
+
+    const formulario = document.querySelector("form");
+    formulario.reset();
+
+    imagemPrincipal.src = "./img/imagem1.png";
+    nomeDaImagem.textContent = "image_projeto.png"
+
+    listaTags.innerHTML = ""
 })
