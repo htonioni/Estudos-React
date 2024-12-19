@@ -35,23 +35,10 @@ inputUpload.addEventListener("change", async (evento) => {
     }
 })
 
-// Funcionalidade de adicionar tags 
 const inputTags = document.getElementById("input-tags");
 const listaTags = document.getElementById("lista-tags")
 
-inputTags.addEventListener("keypress", (evento) => {
-    if (evento.key === 'Enter') {
-        evento.preventDefault()
-        const tagTexto = inputTags.value.trim();
-        if (tagTexto !== ""){
-            const tagNova = document.createElement("li");
-            tagNova.innerHTML = `<p>${tagTexto}</p><img src="./img/close-black.svg" class="remove-tag">`;
-            listaTags.appendChild(tagNova);
-            inputTags.value = "";
-        }
-    }
-})
-
+const tagsDisponiveis = ["Front-end", "Programação", "Data Science", "Full-stack", "HTML", "CSS", "JavaScript"];
 listaTags.addEventListener("click", (evento) => {
     if (evento.target.classList.contains("remove-tag")) {
         // seleciona o pai (box) onde o X foi clicado
@@ -59,6 +46,36 @@ listaTags.addEventListener("click", (evento) => {
         listaTags.removeChild(tagParaRemover)
     } else {
         console.log("click fora do simbolo");
-        
+    }
+})
+
+async function verificaTagsDisponiveis(tagTexto) {
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(tagsDisponiveis.includes(tagTexto))
+        }, 1000)
+    })
+}
+
+inputTags.addEventListener("keypress", async (evento) => {
+    if (evento.key === 'Enter') {
+        evento.preventDefault()
+        const tagTexto = inputTags.value.trim();
+        if (tagTexto !== ""){
+            try {
+                const tagExiste = await verificaTagsDisponiveis(tagTexto);
+                if (tagExiste) {
+                    const tagNova = document.createElement("li");
+                    tagNova.innerHTML = `<p>${tagTexto}</p><img src="./img/close-black.svg" class="remove-tag">`;
+                    listaTags.appendChild(tagNova);
+                    inputTags.value = "";
+                } else {
+                    alert("Tag nao encontrada")
+                }
+            } catch (error) {
+                console.error("Erro ao verificar a existencia da tag");
+                alert("Erro ao verificar, checar o console")
+            }
+            }
     }
 })
