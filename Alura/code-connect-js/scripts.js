@@ -48,8 +48,17 @@ inputTags.addEventListener("keypress", (evento) => {
             tagNova.innerHTML = `<p>${tagTexto}</p><img src="./img/close-black.svg" class="remove-tag">`;
             listaTags.appendChild(tagNova);
             inputTags.value = "";
-
         }
     }
+})
 
+listaTags.addEventListener("click", (evento) => {
+    if (evento.target.classList.contains("remove-tag")) {
+        // seleciona o pai (box) onde o X foi clicado
+        const tagParaRemover = evento.target.parentElement;
+        listaTags.removeChild(tagParaRemover)
+    } else {
+        console.log("click fora do simbolo");
+        
+    }
 })
