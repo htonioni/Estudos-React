@@ -5,29 +5,35 @@ const longoBtn = document.querySelector(".app__card-button--longo");
 const titulo = document.querySelector(".app__title");
 const banner = document.querySelector(".app__image");
 const cardTimer = document.querySelector(".app__card-timer");
-const duracaoFoco = 1500; 
-const duracaoDescansoCurto = 300; 
-const duracaoDescansoLongo = 900; 
+const botoes = document.querySelectorAll(".app__card-button")
+const duracaoFoco = 1500;
+const duracaoDescansoCurto = 300;
+const duracaoDescansoLongo = 900;
 
 focoBtn.addEventListener("click", () => {
    alteraContexto("foco");
+   focoBtn.classList.add("active");
 })
 
 curtoBtn.addEventListener("click", () => {
    alteraContexto("descanso-curto");
+   curtoBtn.classList.add("active");
 })
 
 longoBtn.addEventListener("click", () => {
    alteraContexto("descanso-longo")
+   longoBtn.classList.add("active");
 })
 
-function alteraContexto(contexto){
+function alteraContexto(contexto) {
+   botoes.forEach((contexto) => {
+      contexto.classList.remove("active")
+   })
    html.setAttribute("data-contexto", contexto)
-   banner.setAttribute("src" ,`./imagens/${contexto}.png`)
+   banner.setAttribute("src", `./imagens/${contexto}.png`)
    switch (contexto) {
       case "foco":
-         titulo.innerHTML = `Otimize sua produtividade,<br>
-                <strong class="app__title-strong">mergulhe no que importa.</strong>`
+         titulo.innerHTML = `Otimize sua produtividade,<br><strong class="app__title-strong">mergulhe no que importa.</strong>`
          break;
       case "descanso-curto":
          titulo.innerHTML = `Que tal dar uma respirada?<br>
