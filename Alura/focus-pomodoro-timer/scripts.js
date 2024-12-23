@@ -5,10 +5,21 @@ const longoBtn = document.querySelector(".app__card-button--longo");
 const titulo = document.querySelector(".app__title");
 const banner = document.querySelector(".app__image");
 const cardTimer = document.querySelector(".app__card-timer");
-const botoes = document.querySelectorAll(".app__card-button")
+const botoes = document.querySelectorAll(".app__card-button");
+const musicaFocoInput = document.getElementById("alternar-musica");
+const musica = new Audio("./sons/luna-rise-part-one.mp3")
 const duracaoFoco = 1500;
 const duracaoDescansoCurto = 300;
 const duracaoDescansoLongo = 900;
+
+musica.loop = true;
+musicaFocoInput.addEventListener("change", () => {
+   if (musica.paused) {
+      musica.play()
+   } else {
+      musica.pause()
+   }
+})
 
 focoBtn.addEventListener("click", () => {
    alteraContexto("foco");
