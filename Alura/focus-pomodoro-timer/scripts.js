@@ -7,11 +7,14 @@ const banner = document.querySelector(".app__image");
 const cardTimer = document.querySelector(".app__card-timer");
 const botoes = document.querySelectorAll(".app__card-button");
 const musicaFocoInput = document.getElementById("alternar-musica");
-const startPauseBtn = document.getElementById("start-pause")
-const musica = new Audio("./sons/luna-rise-part-one.mp3")
-const beep = new Audio("./sons/beep.mp3")
-const pause = new Audio("./sons/pause.mp3")
-const play = new Audio("./sons/play.wav")
+const startPauseBtn = document.getElementById("start-pause");
+const musica = new Audio("./sons/luna-rise-part-one.mp3");
+const audioTempoFinalizado = new Audio("./sons/beep.mp3");
+const audioPause = new Audio("./sons/pause.mp3");
+const audioPlay = new Audio("./sons/play.wav");
+const iniciarOuPausarBtn = document.querySelector("#start-pause span");
+const iniciarOuPausarImg = document.querySelector("#start-pause img");
+const tempoNaTela = document.querySelector("#timer")
 
 let tempoDeorridoEmSegundos = 5
 let intervaloId = null
@@ -43,8 +46,6 @@ longoBtn.addEventListener("click", () => {
    longoBtn.classList.add("active");
 })
 
-
-
 function alteraContexto(contexto) {
    botoes.forEach((contexto) => {
       contexto.classList.remove("active")
@@ -70,27 +71,39 @@ function alteraContexto(contexto) {
 
 const contagemRegressiva = () => {
    if(tempoDeorridoEmSegundos <= 0){
-      zerar() 
-      beep.play()
-      alert("Acabou o tempo!")
-      return
-   }
-   tempoDeorridoEmSegundos -= 1
-   console.log(tempoDeorridoEmSegundos);
-}
-
-
-startPauseBtn.addEventListener("click", iniciarPause)
-
-function iniciarPause() {
-   if (intervaloId){
+      // audioTempoFinalizado.play();
+      alert("Acabou o tempo!");
       zerar();
       return
    }
+   tempoDeorridoEmSegundos -= 1
+   mostrarTempo()
+}
+
+startPauseBtn.addEventListener("click", iniciarOuPausar)
+
+function iniciarOuPausar() {
+   if (intervaloId){
+      audioPause.play()
+      zerar();
+      return
+   }
+   audioPlay.play()
    intervaloId = setInterval(contagemRegressiva, 1000);
+   iniciarOuPausarBtn.textContent = "Pausar"
+   iniciarOuPausarImg.src = "./imagens/pause.png"
 }
 
 function zerar() {
    clearInterval(intervaloId);
+   iniciarOuPausarBtn.textContent = "Começar"
+   iniciarOuPausarImg.src = "./imagens/play_arrow.png"
    intervaloId = null;
 }
+
+function mostrarTempo() {
+   const tempo = tempoDeorridoEmSegundos;
+   tempoNaTela.innerHTML = `${tempo}`
+}
+
+mostrarTempo()
