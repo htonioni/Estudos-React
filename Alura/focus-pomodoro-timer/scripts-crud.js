@@ -25,10 +25,12 @@ function criarElementoTarefa(tarefaCadastrada) {
    const botao = document.createElement("button");
    botao.classList.add("app_button-edit");
    botao.onclick = () => {
-      const novaDescricao = prompt("Qual é o novo nome da tarefa?")
-      paragrafo.textContent = novaDescricao
-      tarefaCadastrada.descricao = novaDescricao
-      atualizarTarefas();
+      const novaDescricao = prompt("Qual é o novo nome da tarefa?").trim()
+      if (novaDescricao != null) {
+         paragrafo.textContent = novaDescricao
+         tarefaCadastrada.descricao = novaDescricao
+         atualizarTarefas();
+      }
    }
    const imagemBotao = document.createElement("img");
    imagemBotao.src = "./imagens/crud/edit.png";
