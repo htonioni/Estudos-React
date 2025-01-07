@@ -16,7 +16,7 @@ const iniciarOuPausarBtn = document.querySelector("#start-pause span");
 const iniciarOuPausarImg = document.querySelector("#start-pause img");
 const tempoNaTela = document.querySelector("#timer");
 
-let tempoDeorridoEmSegundos = 1500
+let tempoDeorridoEmSegundos = 2
 let intervaloId = null
 
 musica.loop = true;
@@ -74,6 +74,11 @@ const contagemRegressiva = () => {
    if(tempoDeorridoEmSegundos <= 0){
       audioTempoFinalizado.play();
       alert("Acabou o tempo!");
+      const focoAtivo = html.getAttribute('data-contexto') == 'foco'
+      if (focoAtivo) {
+         const evento = new CustomEvent('FocoFinalizado');
+         document.dispatchEvent(evento);
+      }
       zerar();
       return
    };
@@ -85,20 +90,20 @@ startPauseBtn.addEventListener("click", iniciarOuPausar);
 
 function iniciarOuPausar() {
    if (intervaloId){
-      audioPause.play()
+      audioPause.play();
       zerar();
       return
    };
-   audioPlay.play()
+   audioPlay.play();
    intervaloId = setInterval(contagemRegressiva, 1000);
-   iniciarOuPausarBtn.textContent = "Pausar"
-   iniciarOuPausarImg.src = "./imagens/pause.png"
+   iniciarOuPausarBtn.textContent = "Pausar";
+   iniciarOuPausarImg.src = "./imagens/pause.png";
 };
 
 function zerar() {
    clearInterval(intervaloId);
-   iniciarOuPausarBtn.textContent = "Começar"
-   iniciarOuPausarImg.src = "./imagens/play_arrow.png"
+   iniciarOuPausarBtn.textContent = "Começar";
+   iniciarOuPausarImg.src = "./imagens/play_arrow.png";
    intervaloId = null;
 };
 
