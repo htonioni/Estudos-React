@@ -11,8 +11,8 @@ const api = {
    async salvarPensamento(pensamento) {
       try {
          const response = await fetch("http://localhost:3000/pensamentos", {
-            method:"POST",
-            headers:{
+            method: "POST",
+            headers: {
                "Content-Type": "application/json",
             },
             body: JSON.stringify(pensamento)
@@ -20,6 +20,32 @@ const api = {
          return await response.json()
       } catch (error) {
          alert("Erro ao cadastrar pensamento")
+         throw error
+      }
+   },
+   async buscarPensamentoPorId(id) {
+      try {
+         const response = await fetch(`http://localhost:3000/pensamentos/${id}`)
+         return await response.json()
+      } catch (error) {
+         alert("Erro ao buscar id pensamento")
+         throw error
+      }
+   },
+   async editarPensamento(pensamento) {
+      try {
+         const response = await fetch(`http://localhost:3000/pensamentos/${pensamento.id}`, {
+            method: "PUT",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify(pensamento)
+         })
+         return await response.json()
+
+
+      } catch (error) {
+         alert("Erro ao editar pensamento")
          throw error
       }
    }
