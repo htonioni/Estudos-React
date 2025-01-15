@@ -25,7 +25,7 @@ async function manipularSubmissaoFormulario(event) {
       }
       ui.renderizarPensamentos()
    } catch {
-      alert("Erro ao salvar pensamento")
+      alert("Erro ao manipularSubmissaoFormulario")
    }
 }
 
