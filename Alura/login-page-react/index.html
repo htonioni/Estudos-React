@@ -26,7 +26,48 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.3/babel.min.js"
         integrity="sha512-MIXku7j6pJ0hqd2T4WXZMGerp3BU9B91rfLRDp/McDBNNdnwTD+yLJaz9AHcYXT6k16dYTkG9S2KRPGxaBIfBQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script type="text/babel">
+        function Titulo() {
+            return (
+                <h1 className="form__titulo">Login</h1>
+            )
+        }
+        function Subtitulo() {
+            return (
+                <h2 className="form__texto">Boas-vindas! Faça seu login.</h2>
+            )
+        }
+        function CampoDeDigitacao({tipo, conteudo}) {
+            return (
+                <div className="form__campo-digitacao">
+                    <label for={tipo}>{conteudo}</label>
+                    <input type={tipo} id={tipo} required />
+                </div>
+            )
+        }
+        function Botao() {
+            return (
+                <button type="submit" className="form__botao">Login</button>
+            )
+        }
+        function PaginaDeLogin() {
+            return (
+                <div className="container-login">
+                    <img src="./img/imagem-login.png" alt="banner home" />
+                    <section>
+                        <form>
+                            <Titulo />
+                            <Subtitulo />
+                            <CampoDeDigitacao tipo="email" conteudo="E-mail ou usuário"/>
+                            <CampoDeDigitacao tipo="password" conteudo="Senha"/>
+                            <Botao />
+                        </form>
+                    </section>
+                </div>
+            )
+        }
+        ReactDOM.createRoot(document.getElementById('root')).render(<PaginaDeLogin />)
+    </script>
 
 </body>
 
