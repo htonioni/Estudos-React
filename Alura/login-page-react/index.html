@@ -27,9 +27,9 @@
         integrity="sha512-MIXku7j6pJ0hqd2T4WXZMGerp3BU9B91rfLRDp/McDBNNdnwTD+yLJaz9AHcYXT6k16dYTkG9S2KRPGxaBIfBQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script type="text/babel">
-        function Titulo() {
+        function Titulo({ children }) {
             return (
-                <h1 className="form__titulo">Login</h1>
+                <h1 className="form__titulo">{children}</h1>
             )
         }
         function Subtitulo() {
@@ -37,11 +37,16 @@
                 <h2 className="form__texto">Boas-vindas! Faça seu login.</h2>
             )
         }
-        function CampoDeDigitacao({tipo, conteudo}) {
+        function CampoDeDigitacao({ tipo, conteudo, value, setValor }) {
             return (
                 <div className="form__campo-digitacao">
                     <label for={tipo}>{conteudo}</label>
-                    <input type={tipo} id={tipo} required />
+                    <input type={tipo} 
+                    id={tipo} 
+                    required 
+                    value={value} 
+                    onChange={(evento) => setValor(evento.target.value)}
+                    />
                 </div>
             )
         }
@@ -51,16 +56,20 @@
             )
         }
         function PaginaDeLogin() {
+            const [email, setEmail] = React.useState("") 
+            const [password, setPassword] = React.useState("")
             return (
                 <div className="container-login">
                     <img src="./img/imagem-login.png" alt="banner home" />
                     <section>
                         <form>
-                            <Titulo />
+                            <Titulo>Login</Titulo>
                             <Subtitulo />
-                            <CampoDeDigitacao tipo="email" conteudo="E-mail ou usuário"/>
-                            <CampoDeDigitacao tipo="password" conteudo="Senha"/>
+                            <CampoDeDigitacao tipo="email" conteudo="E-mail ou usuário" value={email} setValor={setEmail}/>
+                            <CampoDeDigitacao tipo="password" conteudo="Senha" setValor={setPassword}/>
                             <Botao />
+                            <h1>This is the email: {email}</h1>
+                            <h1>This is the password: {password}</h1>
                         </form>
                     </section>
                 </div>
