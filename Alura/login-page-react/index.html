@@ -41,35 +41,73 @@
             return (
                 <div className="form__campo-digitacao">
                     <label for={tipo}>{conteudo}</label>
-                    <input type={tipo} 
-                    id={tipo} 
-                    required 
-                    value={value} 
-                    onChange={(evento) => setValor(evento.target.value)}
+                    <input type={tipo}
+                        id={tipo}
+                        required
+                        value={value}
+                        onChange={(evento) => setValor(evento.target.value)}
                     />
                 </div>
             )
         }
         function Botao() {
             return (
-                <button type="submit" className="form__botao">Login</button>
+                <button type="submit" className="form__botao" >Login</button>
+            )
+        }
+
+        function Checkbox() {
+            return (
+                <>
+                    <div className="form__campo-checkbox">
+                        <input type="checkbox" id='lembrar' />
+                        <label for="lembrar" />
+                    </div>
+                    <p className="form__opcoes-texto">Lembrar-me</p>
+                </>
+            )
+        }
+
+        function Texto({ classe, children }){
+            return (
+                <p className={classe}>{children}</p>
+            )
+        }
+
+        function ItemRedesSociais({ url, imageSrc }){
+            return (
+                <li>
+                    <a href={url}>
+                        <img src={`./img/${imageSrc}.svg`} alt={`icone do ${imageSrc}`} />
+                    </a>
+                </li>
             )
         }
         function PaginaDeLogin() {
-            const [email, setEmail] = React.useState("") 
+            const [email, setEmail] = React.useState("")
             const [password, setPassword] = React.useState("")
+
+            const handleSubmit = (event) => {
+                event.preventDefault()
+            }
+
             return (
                 <div className="container-login">
                     <img src="./img/imagem-login.png" alt="banner home" />
                     <section>
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <Titulo>Login</Titulo>
                             <Subtitulo />
-                            <CampoDeDigitacao tipo="email" conteudo="E-mail ou usuário" value={email} setValor={setEmail}/>
-                            <CampoDeDigitacao tipo="password" conteudo="Senha" setValor={setPassword}/>
+                            <CampoDeDigitacao tipo="email" conteudo="E-mail ou usuário" value={email} setValor={setEmail} />
+                            <CampoDeDigitacao tipo="password" conteudo="Senha" setValor={setPassword} />
+                            <fieldset className="form__opcoes">
+                                <Checkbox />
+                                <p>
+                                    <a href="#" aria-label="Recuperar senha esquecida">Esqueci a senha</a>
+                                </p>
+                            </fieldset>
                             <Botao />
-                            <h1>This is the email: {email}</h1>
-                            <h1>This is the password: {password}</h1>
+                            <ItemRedesSociais url='https://www.github.com' imageSrc="Github" />
                         </form>
                     </section>
                 </div>
