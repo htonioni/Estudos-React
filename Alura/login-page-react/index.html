@@ -68,19 +68,27 @@
             )
         }
 
-        function Texto({ classe, children }){
+        function Texto({ classe, children }) {
             return (
                 <p className={classe}>{children}</p>
             )
         }
 
-        function ItemRedesSociais({ url, imageSrc }){
+        function ItemRedesSociais({ url, imageSrc }) {
             return (
                 <li>
                     <a href={url}>
                         <img src={`./img/${imageSrc}.svg`} alt={`icone do ${imageSrc}`} />
                     </a>
                 </li>
+            )
+        }
+
+        function Link({ children }) {
+            return (
+                <a href="#" className="container-links__link">
+                    {children}
+                </a>
             )
         }
         function PaginaDeLogin() {
@@ -107,8 +115,16 @@
                                 </p>
                             </fieldset>
                             <Botao />
-                            <ItemRedesSociais url='https://www.github.com' imageSrc="Github" />
                         </form>
+                        <div className='container-links'>
+                            <Texto classe='container-links__titulo'>ou entre com outras contas</Texto>
+                            <ul>
+                                <ItemRedesSociais url='https://www.google.com' imageSrc="Google" />
+                                <ItemRedesSociais url='https://www.github.com' imageSrc="Github" />
+                            </ul>
+                            <Texto classe='container-links__texto'>Ainda nao tem conta?</Texto>
+                            <Link>Crie seu cadastro</Link>
+                        </div>
                     </section>
                 </div>
             )
