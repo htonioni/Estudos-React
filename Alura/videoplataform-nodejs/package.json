@@ -1,16 +1,22 @@
 {
-  "name": "videoplataform",
-  "version": "1.0.0",
-  "description": "![Imagem de capa do curso. O título é \"3519 - Node.js e terminal\" e o subtítulo é \"Dominando o ambiente de desenvolvimento front-end\".](./thumb.png)",
-  "main": "script.js",
+  "name": "videoplataform-vite-nodejs",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "init": "json-server --watch backend/videos.json",
+    "linter": "eslint ."
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "eslint": "^9.18.0",
+    "json-server": "^0.17.4",
     "prettier": "3.0.3",
-    "json-server": "^0.17.4"
+    "vite": "^4.4.5"
+  },
+  "dependencies": {
+    "axios": "^1.7.9"
   }
 }
