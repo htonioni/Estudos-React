@@ -1,9 +1,8 @@
-
-![Capa do repositório do curso, contendo no canto superior esquerdo o símbolo do github com o texto /alura-cursos, e no direito o logo da alura. Abaixo possuímos o título React: componentes e JSX com o subtítulo aprendendo a construir componentes reutilizáveis. Por fim, no canto inferior direito, há o logo da escola de front-end.](https://imgur.com/n21Gypa.png)
+![alt text](img/image.png)
 
 # CodeConnect
 
-Rede social para pessoas desenvolvedoras chamada CodeConnect para o curso de React: componentes e JSX.
+Projeto inicial de React de uma pagina de login Rede social para pessoas desenvolvedoras chamada CodeConnect para o curso de React: componentes e JSX.
 
 ## 🔨 Funcionalidades do projeto
 
@@ -21,10 +20,6 @@ As técnicas e tecnologias utilizadas pra isso são:
 - `Props`: Dados passados de um componente pai para um componente filho no React.
 - `useState`: Hook no React que permite adicionar estado a componentes funcionais.
 - `Manipulação de eventos`: Ação de responder a interações do usuário, como cliques e teclas pressionadas, em aplicações web.
-
-## 📁 Acesso ao projeto
-
-Você pode [acessar o código fonte do projeto inicial](https://github.com/MonicaHillman/3492-React-componentesi/tree/projeto-base) ou [baixá-lo](https://github.com/MonicaHillman/3492-React-componentes/archive/refs/heads/projeto-base.zip).
 
 ## 🎨 Figma
 

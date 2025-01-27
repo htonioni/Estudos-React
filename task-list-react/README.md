@@ -1,6 +1,6 @@
 # Gerenciador de Tarefas (Task List)
 
-Este é um projeto de gerenciador de tarefas desenvolvido com React e Vite. Ele permite adicionar, visualizar, editar e excluir tarefas, além de marcar tarefas como concluídas.
+Este é um projeto de gerenciador de tarefas (CRUD) desenvolvido com React e Vite. Ele permite adicionar, visualizar, editar e excluir tarefas, além de marcar tarefas como concluídas.
 ![alt text](./src/assets/1.png)
 
 ## Funcionalidades
