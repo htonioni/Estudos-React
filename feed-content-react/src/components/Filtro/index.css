@@ -1,0 +1,26 @@
+.container-filtro {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+.container-filtro ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.container-filtro ul li {
+    background-color: var(--cinza-claro);
+    color: var(--cinza-escuro);
+    padding: 0.25em 0.5em 0.25em 2.5em;
+    border-radius: 4px;
+    background: var(--cinza-claro) url('./assets/close.svg') no-repeat 22px;
+}
+
+.container-filtro button {
+    border: none;
+    background-color: transparent;
+    color: var(--cinza-medio);
+    font-size: 18px;
+}
+
