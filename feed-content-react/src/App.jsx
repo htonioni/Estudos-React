@@ -10,10 +10,6 @@ function App() {
   useEffect(() => {
     fetch('http://my-json-server.typicode.com/MonicaHillman/codeconnect-api/publicacoes').then(resposta => resposta.json()).then(dados => setDados(dados))
   }, [])
-
-  console.log(dados);
-  
-
   return (
     <div className='container'>
       <Sidebar />

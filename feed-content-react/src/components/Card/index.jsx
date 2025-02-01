@@ -2,8 +2,9 @@ import chat from './assets/chat.svg'
 import code from './assets/code.svg'
 import share from './assets/share.svg'
 import './styles.css'
+import PropTypes from 'prop-types';
 
-export default function Card({ id, imgUrl, titulo, resumo, linhasDeCodigo, compartilhamentos, comentarios, usuario }){
+export default function Card({ imgUrl, titulo, resumo, linhasDeCodigo, compartilhamentos, comentarios, usuario }) {
     return (
         <article className="card">
             <div className="card__imagem">
@@ -39,3 +40,17 @@ export default function Card({ id, imgUrl, titulo, resumo, linhasDeCodigo, compa
         </article>
     )
 }
+
+Card.propTypes = {
+    id: PropTypes.number.isRequired,
+    imgUrl: PropTypes.string.isRequired,
+    titulo: PropTypes.string.isRequired,
+    resumo: PropTypes.string.isRequired,
+    linhasDeCodigo: PropTypes.number.isRequired,
+    compartilhamentos: PropTypes.number.isRequired,
+    comentarios: PropTypes.number.isRequired,
+    usuario: PropTypes.shape({
+        imagem: PropTypes.string.isRequired,
+        nome: PropTypes.string.isRequired
+    }).isRequired
+};
