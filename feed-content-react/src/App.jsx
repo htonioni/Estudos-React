@@ -2,6 +2,7 @@ import './App.css'
 import Sidebar from './components/Siderbar'
 import BarraDePesquisa from './components/BarraDePesquisa'
 import Filtro from './components/Filtro'
+import Card from './components/Card'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <div className='container-content'>
         <BarraDePesquisa />
         <Filtro />
+        <Card />
       </div>
     </div>
   )
