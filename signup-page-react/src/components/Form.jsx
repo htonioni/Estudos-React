@@ -1,8 +1,10 @@
 import './Form.css'
+import squares from '../assets/squares.png'
 
 export default function Form() {
    return (
       <form className='form-element'>
+         <img className='square-top' src={squares} alt="squares"/>
          <div className='top'>
             <h1>Sign Up</h1>
             <span>Get started absolutely free</span>

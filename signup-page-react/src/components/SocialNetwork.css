@@ -10,9 +10,9 @@
 }
 
 ul {
-  list-style: none;
   display: flex;
   flex-direction: column;
+  list-style: none;
   gap: 2rem;
 }
 
@@ -20,10 +20,12 @@ li {
   display: flex;
   align-items: center;
   gap: .6rem;
-  width: 20vw;
   background-color: white;
+  width: 20vw;
+  padding: .2rem 0 .2rem 27%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid #CACACA;
   border-radius: 16px;
-  padding: .2rem 0 .2rem 7rem;
 }
 
 li a {
@@ -37,4 +39,10 @@ li a {
   top: 2rem;
   left: 2rem;
   width: 10rem;
+}
+
+.square-top {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
