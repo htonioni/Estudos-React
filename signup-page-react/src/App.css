@@ -4,10 +4,9 @@
 }
 
 .homepage-left {
-  text-align: center;
   flex: 1;
   background: url(./assets/left-background.png);
-  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .homepage-right {

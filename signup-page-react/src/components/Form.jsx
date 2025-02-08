@@ -11,7 +11,7 @@ export default function Form() {
          <input type="password" name="password" id="passwordInput" />
          <div className='checkbox-div'>
             <label>
-               <input type="checkbox" name="policy" />Creating an account means you are okay with our Terms of Service, Privacy Policy, and default Notification Settings
+               <input type="checkbox" name="policy" />Creating an account means you are okay with our Terms <br/> of Service, Privacy Policy, and default Notification Settings
             </label>
          </div>
          <button type="submit" className='submit-button'>Sign Up</button>
