@@ -2,10 +2,12 @@ import "./SocialNetwork.css";
 import fb from "../assets/icon_fb.svg";
 import linkdn from "../assets/icon_linkedin.svg";
 import twitter from "../assets/icon_twitter.svg";
+import Pisocial from '../assets/Pisocial_logo.svg'
 
 function SocialNetwork() {
   return (
     <div className="socialNetworkDiv">
+      <img className="logo" src={Pisocial} alt="logo img" />
       <ul>
         <li>
           <img src={linkdn} alt="icon_linkedin" />
