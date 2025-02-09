@@ -1,65 +1,51 @@
-# Sign Up Page React
+# Página de Cadastro React
 
-[imagem](./src/assets/image.png)
-This project is a simple sign-up page built with React and Vite. It includes a form for user registration and options to sign up using social networks.
+![Página de Cadastro](./src/assets/image.png)
 
-## Project Structure
+Este projeto é uma página de cadastro simples construída com React e Vite. Inclui um formulário para registro de usuários e opções para se cadastrar usando redes sociais.
 
-- `src/components/Form.jsx`: Contains the form component for user registration.
-- `src/components/SocialNetwork.jsx`: Contains the component for social network sign-up options.
-- `src/App.jsx`: The main component that combines the form and social network components.
-- `src/App.css`: Styles for the main component.
-- `src/components/Form.css`: Styles for the form component.
-- `src/components/SocialNetwork.css`: Styles for the social network component.
+## Estrutura do Projeto
 
-## Getting Started
+- `src/components/Form.jsx`: Contém o componente de formulário para registro de usuários.
+- `src/components/SocialNetwork.jsx`: Contém o componente para opções de cadastro via redes sociais.
+- `src/App.jsx`: O componente principal que combina os componentes de formulário e redes sociais.
+- `src/App.css`: Estilos para o componente principal.
+- `src/components/Form.css`: Estilos para o componente de formulário.
+- `src/components/SocialNetwork.css`: Estilos para o componente de redes sociais.
 
-### Prerequisites
+## Começando
+
+### Pré-requisitos
 
 - Node.js
-- npm or yarn
+- npm ou yarn
 
-### Installation
+### Instalação
 
-1. Clone the repository:
+1. Clone o repositório:
     ```sh
-    git clone https://github.com/your-username/signup-page-react.git
+    git clone https://github.com/seu-usuario/signup-page-react.git
     ```
-2. Navigate to the project directory:
+2. Navegue até o diretório do projeto:
     ```sh
     cd signup-page-react
     ```
-3. Install the dependencies:
+3. Instale as dependências:
     ```sh
     npm install
     ```
-    or
+    ou
     ```sh
     yarn install
     ```
 
-### Running the Project
+### Executando o Projeto
 
-To start the development server, run:
+Para iniciar o servidor de desenvolvimento, execute:
 ```sh
 npm run dev
 ```
-or
+ou
 ```sh
 yarn dev
 ```
-
-### Building the Project
-
-To build the project for production, run:
-```sh
-npm run build
-```
-or
-```sh
-yarn build
-```
-
-## License
-
-This project is licensed under the MIT License.

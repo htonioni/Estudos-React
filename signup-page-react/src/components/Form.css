@@ -65,3 +65,9 @@
    width: 25rem;
    margin-top: 2.4rem;
 }
+
+#welcomeUsuario {
+   display: none;
+   margin-top:22px;
+   font-size: 22px;
+}
