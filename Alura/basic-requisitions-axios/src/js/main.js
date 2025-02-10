@@ -4,27 +4,57 @@ const headersEl = document.getElementById('headers');
 const configEl = document.getElementById('config');
 
 const get = () => {
-    console.log('get');
-    axios({
-        method:'get',
-        url: 'https://jsonplaceholder.typicode.com/posts'
-    })
+    // Mesma forma de usar o axios:
+    // axios({
+    //     method:'get',
+    //     url: 'https://jsonplaceholder.typicode.com/posts'
+    // })
+    const config = {
+        params: {
+            _limit: 5
+        }
+    }
+
+    axios.get('https://jsonplaceholder.typicode.com/posts', config)
+        .then((response) => renderOutput(response))
 }
 
 const post = () => {
-    console.log('post');
+    const data = {
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+    };
+
+    axios.post('https://jsonplaceholder.typicode.com/posts', data)
+        .then((response) => renderOutput(response))
 }
 
 const put = () => {
-    console.log('put');
+    const data = {
+        id: 1,
+        title: 'foo',
+        body: 'bar',
+        userId: 1,
+    }
+
+    axios.put('https://jsonplaceholder.typicode.com/posts/1', data)
+        .then((response) => renderOutput(response))
 }
 
 const patch = () => {
-    console.log('patch');
+    const data = {
+        title: 'lavaVUe',
+    }
+
+    axios.patch('https://jsonplaceholder.typicode.com/posts/1', data)
+        .then((response) => renderOutput(response))
 }
 
 const del = () => {
-    console.log('delete');
+
+    axios.delete('https://jsonplaceholder.typicode.com/posts/2')
+        .then((response) => renderOutput(response))
 }
 
 const multiple = () => {
