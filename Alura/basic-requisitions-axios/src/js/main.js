@@ -58,19 +58,51 @@ const del = () => {
 }
 
 const multiple = () => {
+    Promise.all([
+        axios.get('https://jsonplaceholder.typicode.com/posts?limit=10'),
+        axios.get('https://jsonplaceholder.typicode.com/users?limit=10')
+    ]).then((response) => {
+        console.table(response[0].data);
+        console.table(response[1].data);
+    })
     console.log('multiple');
 }
 
 const transform = () => {
-    console.log('transform');
+    const config = {
+        params: {
+            _limit: 8
+        },
+        transformResponse: [function (data) {
+            return JSON.parse(data);
+        }],
+    }
+
+    axios.get('https://jsonplaceholder.typicode.com/posts', config)
+        .then((response) => renderOutput(response))
 }
 
 const errorHandling = () => {
-    console.log('errorHandling');
+    axios.get('https://jsonplaceholder.typicode.com/postss')
+    .then((response) => renderOutput(response))
+    .catch((error) => {
+        renderOutput(error.response)
+    })
 }
 
 const cancel = () => {
-    console.log('cancel');
+    const controller = new AbortController();
+    const config = {
+        params: {
+            _limit: 5
+        },
+        signal: controller.signal
+    }
+
+    axios.get('https://jsonplaceholder.typicode.com/posts', config)
+        .then((response) => renderOutput(response))
+
+        controller.abort()
 }
 
 const clear = () => {
