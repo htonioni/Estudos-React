@@ -1,0 +1,22 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Bernardo Blom",
+      "email": "bernardo.blom@example.com",
+      "senha": "senha123"
+    },
+    {
+      "id": 2,
+      "nome": "Henrique Lima",
+      "email": "henrique.lima@example.com",
+      "senha": "abc456"
+    },
+    {
+      "id": 3,
+      "nome": "Carlos Guilherme",
+      "email": "carlos.guilherme@example.com",
+      "senha": "xyz789"
+    }
+  ]
+}
