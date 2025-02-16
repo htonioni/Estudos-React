@@ -4,7 +4,34 @@ Este repositório contém vários projetos de estudo em React, cada um com difer
 
 ## Projetos
 
-### 1. Gerenciador de Tarefas (_task-list-react_)
+### 1. Página de Cadastro (_signup-page-react_)
+
+Este projeto é uma página de cadastro simples construída com React e Vite. Inclui um formulário para registro de usuários e opções para se cadastrar usando redes sociais.
+![Página de Cadastro](./signup-page-react/src/assets/image.png)
+
+#### Funcionalidades
+
+- Formulário de cadastro de usuários.
+- Opções para cadastro via redes sociais (LinkedIn, Twitter, Facebook).
+- Design responsivo para visualizações em dispositivos móveis e desktop.
+
+#### Tecnologias Utilizadas
+
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build rápida para projetos front-end.
+
+#### Estrutura do Projeto
+
+- `src/components/Form.jsx`: Contém o componente de formulário para registro de usuários.
+- `src/components/SocialNetwork.jsx`: Contém o componente para opções de cadastro via redes sociais.
+- `src/App.jsx`: O componente principal que combina os componentes de formulário e redes sociais.
+- `src/App.css`: Estilos para o componente principal.
+- `src/components/Form.css`: Estilos para o componente de formulário.
+- `src/components/SocialNetwork.css`: Estilos para o componente de redes sociais.
+
+
+
+### 2. Gerenciador de Tarefas (_task-list-react_)
 
 Este é um projeto de gerenciador de tarefas (CRUD) desenvolvido com React e Vite. Ele permite adicionar, visualizar, editar e excluir tarefas, além de marcar tarefas como concluídas.
 ![alt text](./task-list-react/src/assets/1.png)
@@ -25,31 +52,8 @@ Este é um projeto de gerenciador de tarefas (CRUD) desenvolvido com React e Vit
 - **React Router**: Biblioteca para roteamento em aplicações React.
 - **UUID**: Biblioteca para geração de identificadores únicos.
 
-#### Instalação
 
-Para rodar este projeto localmente, você precisará ter o Node.js e o npm instalados. Siga os passos abaixo:
-
-1. Clone o repositório:
-    ```sh
-    git clone https://github.com/htonioni/Estudos-React.git
-    ```
-
-2. Navegue até o diretório do projeto:
-    ```sh
-    cd task-list-react
-    ```
-
-3. Instale as dependências do projeto:
-    ```sh
-    npm install
-    ```
-
-4. Inicie o servidor de desenvolvimento:
-    ```sh
-    npm run dev
-    ```
-
-### 2. CodeConnect (_login-page-react_)
+### 3. CodeConnect (_login-page-react_)
 
 Projeto inicial de React de uma página de login para uma rede social chamada CodeConnect, desenvolvido durante o curso de React: componentes e JSX.
 ![alt text](./login-page-react/img/image.png)
@@ -74,29 +78,6 @@ Projeto inicial de React de uma página de login para uma rede social chamada Co
 #### Figma
 
 Você pode conferir o Figma da aplicação clicando [aqui](https://www.figma.com/file/SASyBm2k3IlqrO8qI1Otg1/CodeConnect-%7C-React%3A-Componentização-e-conceitos-básicos-(JSX)).
-
-
-### 3. Projeto de Login (_second-page-react_)
-
-Este é o meu segundo projeto em React, onde estou aprimorando minhas habilidades de desenvolvimento front-end. O projeto consiste em uma aplicação web que permite aos usuários interagir com uma interface básica de login de usuários.
-![login page](./second-project-react/image.png)
-
-#### Funcionalidades
-
-- Interface de usuário interativa e responsiva.
-- Componentes reutilizáveis.
-- Gerenciamento de estado eficiente.
-- Integração com APIs externas.
-
-#### Tecnologias Utilizadas
-
-- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
-- **JavaScript**: Linguagem de programação utilizada para desenvolver a lógica da aplicação.
-- **HTML**: Linguagem de marcação utilizada para estruturar o conteúdo da aplicação.
-- **CSS**: Linguagem de estilo utilizada para estilizar a aplicação.
-- **Node.js**: Ambiente de execução JavaScript utilizado para o desenvolvimento do back-end.
-- **Webpack**: Ferramenta de empacotamento de módulos JavaScript.
-- **Babel**: Transpilador JavaScript utilizado para compatibilidade com diferentes navegadores.
 
 
 ## Contato
