@@ -1,0 +1,17 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
+
+.homepage {
+  display: flex;
+  height: 100vh;
+}
+
+.homepage-left {
+  flex: 1;
+  background: url(./assets/left-background.png);
+  background-size: cover;
+}
+
+.homepage-right {
+  flex: 1;
+  background-color: #f2f2f2;
+}

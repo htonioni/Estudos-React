@@ -1,0 +1,25 @@
+{
+  "usuarios": [
+    {
+      "nome": "Bernardo Blom",
+      "email": "bernardo.blom@example.com",
+      "senha": "abc123"
+    },
+    {
+      "nome": "Henrique Lima",
+      "email": "henrique.lima@example.com",
+      "senha": "acb456"
+    },
+    {
+      "nome": "Carlos Guilherme",
+      "email": "carlos.guilherme@example.com",
+      "senha": "acb789"
+    },
+    {
+      "id": "6fb9",
+      "email": "rodrigao@example.com",
+      "name": "Rodrigo",
+      "password": "abcrodrigao"
+    }
+  ]
+}
