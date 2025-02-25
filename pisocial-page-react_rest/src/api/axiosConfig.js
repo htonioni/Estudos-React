@@ -7,3 +7,12 @@ export const sendUserData = async (userData) =>{
         console.error(error);
     }
 }
+
+export const checkUserData = async () => {
+    try {
+        // await axios.get('http://localhost:3000/usuarios', userData)
+        await axios.get('http://localhost:3000/usuarios')
+    } catch (error) {
+        console.error(error)
+    }
+}
