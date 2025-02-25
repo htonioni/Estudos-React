@@ -28,7 +28,7 @@ export default function Form({ subtitle, children }) {
          <div className='top'>
             <h1>{children}</h1>
             <span>{subtitle}</span>
-            {children === "Sign up" ? <p>Already have an account? <a href="">Login here!</a></p> : <p>Does not have an account? <a href="">Sign up here!</a></p>}
+            {children === "Sign up" ? <p>Already have an account? <a href="/login">Login here!</a></p> : <p>Does not have an account? <a href="/">Sign up here!</a></p>}
          </div>
          <div className='middle'>
             {children === "Sign up" ? <label htmlFor="email">Name</label> : ""}
