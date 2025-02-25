@@ -8,11 +8,11 @@ export const sendUserData = async (userData) =>{
     }
 }
 
-export const checkUserData = async () => {
+export const getUserData = async () => {
     try {
-        // await axios.get('http://localhost:3000/usuarios', userData)
-        await axios.get('http://localhost:3000/usuarios')
+        const response = await axios.get('http://localhost:3000/usuarios');
+        console.table(response.data);
     } catch (error) {
-        console.error(error)
+        console.error(error);
     }
 }

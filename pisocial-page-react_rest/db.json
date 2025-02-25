@@ -1,25 +1,34 @@
 {
   "usuarios": [
     {
-      "nome": "Bernardo Blom",
+      "name": "Bernardo Blom",
       "email": "bernardo.blom@example.com",
-      "senha": "abc123"
+      "password": "abc123",
+      "id": "f6ee"
     },
     {
-      "nome": "Henrique Lima",
+      "name": "Henrique Lima",
       "email": "henrique.lima@example.com",
-      "senha": "acb456"
+      "password": "acb456",
+      "id": "7a29"
     },
     {
-      "nome": "Carlos Guilherme",
+      "name": "Carlos Guilherme",
       "email": "carlos.guilherme@example.com",
-      "senha": "acb789"
+      "password": "acb789",
+      "id": "09e5"
     },
     {
       "id": "6fb9",
       "email": "rodrigao@example.com",
       "name": "Rodrigo",
       "password": "abcrodrigao"
+    },
+    {
+      "id": "4bf2",
+      "email": "test2@mail.com",
+      "name": "test",
+      "password": "123asc"
     }
   ]
 }

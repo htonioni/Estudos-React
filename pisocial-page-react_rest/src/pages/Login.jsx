@@ -9,7 +9,7 @@ function App() {
         <SocialNetwork text={'Log In'}/>
       </section>
       <section className='homepage-right'>
-        <Form>Log In</Form>
+        <Form subtitle={"Welcome!"} checkboxText={"Remember me"}>Log In</Form>
       </section>
     </div>
   )

@@ -1,13 +1,14 @@
 import { useState } from 'react';
-import { sendUserData } from '../api/axiosConfig';
+import { sendUserData, getUserData } from '../api/axiosConfig';
 import './Form.css'
 import squares from '../assets/squares.png'
 
-export default function Form({ subtitle, children }) {
+export default function Form({ subtitle, children, checkboxText }) {
    // segundo parametro eh uma funcao
    const [email, setEmail] = useState("");
    const [name, setName] = useState("");
    const [password, setPassword] = useState("");
+   const [checkbox, setCheckbox] = useState(false)
 
    function handleSubmit(event) {
       event.preventDefault()
@@ -16,10 +17,19 @@ export default function Form({ subtitle, children }) {
          name: name,
          password: password
       }
-      sendUserData(userData);
-      setEmail("")
-      setName("")
-      setPassword("")
+      if (userData.email != null && userData.email.trim() != "" && checkbox != false) {
+         if (children === 'Sign up') {
+            sendUserData(userData);
+         } else {
+            getUserData(userData);
+         }
+         setEmail("")
+         setName("")
+         setPassword("")
+      } else {
+         alert("Please fill the information")
+      }
+      
    }
 
    return (
@@ -38,13 +48,12 @@ export default function Form({ subtitle, children }) {
             <label htmlFor="password">Password</label>
             <input type="password" name="password" id="passwordInput" value={password} onChange={(e) => setPassword(e.target.value)}/>
          </div>
-         {children === "Sign up" ? 
          <div className='checkbox-div'>
             <label>
-               <input type="checkbox" name="policy" />Creating an account means you are okay with our Terms of Service, Privacy Policy, and default Notification Settings
+               <input type="checkbox" name="policy" onClick={(e) => setCheckbox(e.target.checked)} />
+               <label htmlFor="policy">{checkboxText}</label>
             </label>
          </div>
-         : ""}
          <button type="submit" className='submit-button'>{children}</button>
       </form>
    )

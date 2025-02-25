@@ -9,7 +9,7 @@ function App() {
         <SocialNetwork text={"Sign Up"}/>
       </section>
       <section className='homepage-right'>
-        <Form subtitle={"Get started absolutely free"}>Sign up</Form>
+        <Form subtitle={"Get started absolutely free"} checkboxText={"Creating an account means you are okay with our Terms of Service, Privacy Policy, and default Notification Settingss"}>Sign up</Form>
       </section>
     </div>
   )
