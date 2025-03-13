@@ -7,7 +7,7 @@ Este repositório contém vários projetos de estudo em React, cada um com difer
 ### 1. Página de Cadastro (_signup-page-react_)
 
 Este projeto é uma página de cadastro simples construída com React e Vite. Inclui um formulário para registro de usuários e opções para se cadastrar usando redes sociais.
-![Página de Cadastro](./signup-page-react/src/assets/image.png)
+![Página de Cadastro](./pisocial-page-react_rest/src/assets/image.png)
 
 #### Funcionalidades
 
