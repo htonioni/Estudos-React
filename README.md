@@ -19,6 +19,7 @@ Este projeto é uma página de cadastro simples construída com React e Vite. In
 
 - **React**: Biblioteca JavaScript para construção de interfaces de usuário.
 - **Vite**: Ferramenta de build rápida para projetos front-end.
+- **JSON Server**: Utilizado para simular um backend e gerenciar os dados de usuários.
 
 #### Estrutura do Projeto
 
@@ -29,7 +30,32 @@ Este projeto é uma página de cadastro simples construída com React e Vite. In
 - `src/components/Form.css`: Estilos para o componente de formulário.
 - `src/components/SocialNetwork.css`: Estilos para o componente de redes sociais.
 
+#### Configuração do JSON Server
 
+Para rodar o backend simulado com o `json-server`, siga os passos abaixo:
+
+1. Instale o `json-server` globalmente (caso ainda não esteja instalado):
+   ```
+   npm install -g json-server
+   ```
+2. Utilize o script configurado no `package.json`
+   ```
+   npm run server
+   ```
+
+#### Progresso do Projeto
+
+- ✅ Configuração inicial do projeto com React e Vite.
+- ✅ Criação da estrutura de pastas e organização dos componentes.
+- ✅ Desenvolvimento do componente de formulário (`Form.jsx`) para registro de usuários.
+- ✅ Desenvolvimento do componente de redes sociais (`SocialNetwork.jsx`) para opções de cadastro via LinkedIn, Twitter e Facebook.
+- ✅ Estilização dos componentes com CSS (`Form.css`, `SocialNetwork.css` e `App.css`).
+- ✅ Configuração do `JSON Server` para simular o backend.
+- ✅ Implementação da requisição `HTTP POST` para envio de dados ao backend
+- ⏳ Implementação do `React Router` para navegação entre páginas.
+- ⏳ Desenvolvimento da página de login com formulário funcional.
+- ⏳ Configuração da requisição `HTTP GET` para obter dados do backend.
+- ⏳ Desenvolvimento da página de login sucess.
 
 ### 2. Gerenciador de Tarefas (_task-list-react_)
 
