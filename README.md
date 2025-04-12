@@ -105,6 +105,43 @@ Projeto inicial de React de uma página de login para uma rede social chamada Co
 
 Você pode conferir o Figma da aplicação clicando [aqui](https://www.figma.com/file/SASyBm2k3IlqrO8qI1Otg1/CodeConnect-%7C-React%3A-Componentização-e-conceitos-básicos-(JSX)).
 
+### 4. Feed Content (_feed-content-react_)
+
+Este projeto é um feed de conteúdo interativo desenvolvido com React e Vite. Ele exibe uma lista de publicações com informações detalhadas, como título, resumo, número de linhas de código, compartilhamentos e comentários.
+
+![Feed Content](./feed-content-react/image.png)
+
+#### Funcionalidades
+
+- Exibição de publicações em formato de cards.
+- Barra de pesquisa para filtrar publicações.
+- Filtro para categorias específicas.
+- Sidebar com navegação para diferentes seções.
+- Integração com uma API para buscar dados das publicações.
+
+#### Tecnologias Utilizadas
+
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **Vite**: Ferramenta de build rápida para projetos front-end.
+- **PropTypes**: Biblioteca para validação de propriedades em componentes React.
+- **CSS Grid**: Utilizado para layout responsivo dos cards.
+- **Fetch API**: Para realizar requisições HTTP e obter dados da API.
+
+#### Estrutura do Projeto
+
+- `src/components/BarraDePesquisa`: Componente para a barra de pesquisa.
+- `src/components/Card`: Componente para exibição de cada publicação.
+- `src/components/Filtro`: Componente para aplicar filtros às publicações.
+- `src/components/Siderbar`: Componente para a barra lateral de navegação.
+- `src/App.jsx`: Componente principal que combina todos os outros componentes.
+- `src/App.css`: Estilos globais para o layout do feed.
+
+#### Configuração
+
+1. Instale as dependências do projeto:
+   ```bash
+   npm install
+   ```
 
 ## Contato
 
