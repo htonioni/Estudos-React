@@ -1,15 +1,18 @@
 import ui from "./ui.js"
 import api from "./api.js"
 
-const botaoCancelar = document.getElementById("botao-cancelar")
 
 
 document.addEventListener("DOMContentLoaded", () => {
    ui.renderizarPensamentos();
 
+   const botaoCancelar = document.getElementById("botao-cancelar")
    const formularioPensamento = document.getElementById("pensamento-form");
+   const inputBusca = document.getElementById("campo-busca");
+
    formularioPensamento.addEventListener("submit", manipularSubmissaoFormulario);
    botaoCancelar.addEventListener("click", manipularCancelamento);
+   inputBusca.addEventListener("input", manipularBusca)
 })
 
 async function manipularSubmissaoFormulario(event) {
@@ -31,4 +34,15 @@ async function manipularSubmissaoFormulario(event) {
 
 function manipularCancelamento() {
    ui.limparFormulario();
+}
+
+async function manipularBusca() {
+   const termoBusca = document.getElementById("campo-busca").value;
+   try {
+      const pensamentosFiltrados = await api.buscarPensamentosPorTermo(termoBusca);
+      ui.renderizarPensamentos(pensamentosFiltrados)
+   } catch (error) {
+      alert("Erro ao manipular busca")
+   }
+
 }
