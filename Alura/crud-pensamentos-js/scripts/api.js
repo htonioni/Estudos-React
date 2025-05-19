@@ -45,7 +45,6 @@ const api = {
          })
          return await response.json()
 
-
       } catch (error) {
          alert("Erro ao editar pensamento")
          throw error
@@ -54,7 +53,7 @@ const api = {
    async excluirPensamento(id) {
       try {
          const response = await fetch(`${URL_BASE}/pensamentos/${id}`, {
-            method: "DELETE",
+            method: "DELETE"
          })
       } catch (error) {
          alert("Erro ao remover pensamento")
@@ -77,6 +76,22 @@ const api = {
          throw error
       }
 
+   },
+
+   async atualizarFavorito(id, favorito) {
+      try {
+         const response = await fetch(`${URL_BASE}/pensamentos/${id}`, {
+            method: "PATCH",
+            headers: {
+               "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ favorito })
+         })
+         return await response.json()
+      } catch (error) {
+         alert("erro ao atualizar favorito")
+         throw error
+      }
    }
 }
 

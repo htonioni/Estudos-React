@@ -4,13 +4,13 @@
       "id": "2a56",
       "conteudo": "Vc faz TI? Conserta meu celular!",
       "autoria": "Grupo da família!",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "4c7d",
       "conteudo": "Da vida reclama, mas sem ela não vive!",
       "autoria": "Mestre Yoda",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "5b8a",
@@ -22,7 +22,7 @@
       "id": "68uy",
       "conteudo": "Esse é de laranja que parece de limão, mas tem gosto de tamarindo!",
       "autoria": "Chaves",
-      "favorito": false
+      "favorito": true
     },
     {
       "id": "b807",
