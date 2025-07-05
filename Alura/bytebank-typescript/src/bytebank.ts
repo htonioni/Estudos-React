@@ -1,4 +1,6 @@
 let saldo = 3000;
+
+alert("testando test tss")
 const elementoSaldo = document.querySelector('.saldo-valor .valor') as HTMLElement;
 if (elementoSaldo != null) {
    elementoSaldo.textContent = saldo.toString();
