@@ -1,9 +1,3 @@
-let saldo = 3000;
-alert("testando test tss");
-const elementoSaldo = document.querySelector('.saldo-valor .valor');
-if (elementoSaldo != null) {
-    elementoSaldo.textContent = saldo.toString();
-}
 const elementoFormulario = document.querySelector(".block-nova-transacao form");
 elementoFormulario.addEventListener("submit", (event) => {
     event.preventDefault();
@@ -17,10 +11,10 @@ elementoFormulario.addEventListener("submit", (event) => {
     let tipoTransacao = inputTipoTransacao.value;
     let valor = inputValor.valueAsNumber;
     let data = new Date(inputData.value);
-    if (tipoTransacao === "Depósito") {
+    if (tipoTransacao === TiposTransacao.DEPOSITO) {
         saldo += valor;
     }
-    else if (tipoTransacao === "Transferência" || tipoTransacao === "Pagamento de Boleto") {
+    else if (tipoTransacao === TiposTransacao.PAGAMENTO_BOLETO || tipoTransacao === TiposTransacao.TRANSFERENCIA) {
         saldo -= valor;
     }
     else {
@@ -28,11 +22,11 @@ elementoFormulario.addEventListener("submit", (event) => {
         return;
     }
     elementoSaldo.textContent = saldo.toString();
-    const novaTransacaoObj = {
+    const novaTransacao = {
         tipoTransacao: tipoTransacao,
         valor: valor,
-        data: data
+        data: data,
     };
-    console.log(novaTransacaoObj);
+    console.log(novaTransacao);
     elementoFormulario.reset();
 });
