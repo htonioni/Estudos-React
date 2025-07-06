@@ -1,6 +1,12 @@
-let saldo = 3000;
+let saldo: number = 3000;
 
 const elementoSaldo = document.querySelector('.saldo-valor .valor') as HTMLElement;
+const elementoData = document.querySelector('.block-saldo time') as HTMLElement;
 if (elementoSaldo != null) {
-   elementoSaldo.textContent = saldo.toString();
+    elementoSaldo.textContent = formatarMoeda(saldo);
+}
+
+if (elementoData != null) {
+    let data: Date = new Date();
+    elementoData.textContent = formatarData(data, TiposDatas.DIA_SEMANA_DIA_MES_ANO)
 }
