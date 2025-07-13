@@ -1,6 +1,6 @@
 import { formatarMoeda, formatarData } from "../utils/formatadores.js";
 import { TiposDatas } from "../types/TiposDatas.js";
-import Conta from "../types/conta.js";
+import Conta from "../types/Conta.js";
 
 const elementoSaldo = document.querySelector('.saldo-valor .valor') as HTMLElement;
 const elementoData = document.querySelector('.block-saldo time') as HTMLElement;
