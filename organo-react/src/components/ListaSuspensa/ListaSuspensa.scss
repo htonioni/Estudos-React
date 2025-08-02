@@ -1,6 +1,6 @@
 @import '../../index.scss';
 
-.campo-texto {
+.lista-suspensa {
     margin: 24px 0px;
 
     label {
@@ -9,12 +9,13 @@
         font-size: 24px;
     }
 
-    input {
+    select {
         background-color: #FFF;
         box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
         width: 100%;
         border: none;
-        font-size: 24px;
+        font-size: 22px;
+        color: #757575;
         padding: 24px;
         // trick to "100% width" consider my "padding"
         box-sizing: border-box;
