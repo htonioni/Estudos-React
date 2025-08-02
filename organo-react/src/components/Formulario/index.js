@@ -1,5 +1,6 @@
 import "./Formulario.scss"
 import CampoTexto from "../CampoTexto";
+import ListaSuspensa from "../ListaSuspensa";
 
 const Formulario = () => {
     return (
@@ -9,6 +10,7 @@ const Formulario = () => {
                 <CampoTexto labelName="Nome" placeHolder="Digite seu nome" />
                 <CampoTexto labelName="Cargo" placeHolder="Digite seu cargo" />
                 <CampoTexto labelName="Imagem" placeHolder="Informe o endereço da imagem" />
+                <ListaSuspensa labelName="Time" itens={["Pro Code", "Low Code", "No Code" ]}/>
             </form>
         </section>
     )

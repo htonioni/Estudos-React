@@ -1,0 +1,23 @@
+@import '../../index.scss';
+
+.lista-suspensa {
+    margin: 24px 0px;
+
+    label {
+        display: block;
+        margin-bottom: 8px;
+        font-size: 24px;
+    }
+
+    select {
+        background-color: #FFF;
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+        width: 100%;
+        border: none;
+        font-size: 22px;
+        color: #757575;
+        padding: 24px;
+        // trick to "100% width" consider my "padding"
+        box-sizing: border-box;
+    }
+}
