@@ -4,7 +4,7 @@ import ListaSuspensa from "../ListaSuspensa";
 import Botao from "../Botao";
 import React from "react";
 
-const Formulario = () => {
+const Formulario = ({ handleEmployeeSubmit }) => {
     const itensPickList = [
         "",
         "Pro Code",
@@ -14,7 +14,7 @@ const Formulario = () => {
 
     const onSave = (event) => {
         event.preventDefault()
-        console.log(time, userName, image, employeeType);
+        handleEmployeeSubmit({userName, employeeType, image, time})
     }
 
     const [userName, setUserName] = React.useState("")
