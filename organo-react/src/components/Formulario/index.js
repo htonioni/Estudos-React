@@ -5,12 +5,6 @@ import Botao from "../Botao";
 import React from "react";
 
 const Formulario = ({ handleEmployeeSubmit }) => {
-    const itensPickList = [
-        "",
-        "Pro Code",
-        "Low Code",
-        "No Code"
-    ]
 
     const onSave = (event) => {
         event.preventDefault()
@@ -48,7 +42,7 @@ const Formulario = ({ handleEmployeeSubmit }) => {
                 />
                 <ListaSuspensa
                     labelName="Time"
-                    itens={itensPickList}
+                    itens={itensPickList} //
                     valor={time}
                     aoAlterado={valor => setTime(valor)}
                 />
